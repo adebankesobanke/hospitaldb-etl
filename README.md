@@ -1,2 +1,1 @@
-# hospitaldb-etl
-End-to-end ETL pipeline for hospitaldb using Airflow, Python, SQL and Power BI.
+# Phase 1: Core Hospital Database Design
