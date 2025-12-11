@@ -1,0 +1,9 @@
+treatment_id,visit_id,treatment_desc,cost
+4001,3001,Blood Pressure Medication,15000
+4002,3002,Antimalarial Therapy,8000
+4003,3003,Antibiotics + IV Fluids,12000
+4004,3004,Surgical Procedure,250000
+4005,3005,Pain Management,6000
+4006,3006,Antibiotics,10000
+4007,3007,Rehydration Therapy,5000
+4008,3008,Antihistamines,4000

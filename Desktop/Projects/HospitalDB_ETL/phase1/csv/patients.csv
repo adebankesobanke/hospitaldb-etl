@@ -1,0 +1,11 @@
+patient_id,first_name,last_name,gender,dob,branch_id
+101,Amara,Okafor,F,1990-05-12,1
+102,Tunde,Balogun,M,1985-09-20,3
+103,Ifeanyi,Eze,M,2001-11-03,2
+104,Grace,Johnson,F,1998-02-17,5
+105,Musa,Abdullahi,M,1975-07-30,2
+106,Bola,Owolabi,F,1988-03-28,4
+107,Chinyere,Nwosu,F,1993-06-21,1
+108,Samuel,Edet,M,2000-12-10,5
+109,Halima,Yusuf,F,1997-08-14,2
+110,Kola,Adewale,M,1982-04-09,4
