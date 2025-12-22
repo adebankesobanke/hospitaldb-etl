@@ -1,4 +1,0 @@
-pandas
-sqlalchemy
-psycopg2-binary
-apache-airflow   # only needed if you install/run Airflow in this environment
