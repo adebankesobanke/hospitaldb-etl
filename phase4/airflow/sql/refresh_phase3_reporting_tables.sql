@@ -1,9 +1,7 @@
-/*
-=========================================================
-File: refresh_phase3_reporting_tables.sql
-Purpose:
-    Refresh all Phase 3 reporting tables
-=========================================================
-*/
+-- Placeholder for Phase 3 reporting tables
+-- Replace with actual ETL SQL
 
-CALL reporting.refresh_reporting_tables();
+TRUNCATE TABLE reporting_tables.patient_summary;
+INSERT INTO reporting_tables.patient_summary
+SELECT * FROM phase3_raw.patient_data LIMIT 10;  -- demo placeholder
+

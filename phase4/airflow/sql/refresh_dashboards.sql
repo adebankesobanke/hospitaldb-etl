@@ -1,9 +1,8 @@
-/*
-=========================================================
-File: refresh_dashboards.sql
-Purpose:
-    Refresh dashboard views and materialized views
-=========================================================
-*/
+-- Placeholder for dashboards refresh
+-- Replace with actual dashboard ETL
 
-CALL dashboards.refresh_dashboards();
+-- Example: updating aggregated dashboard tables
+TRUNCATE TABLE dashboards.daily_revenue;
+INSERT INTO dashboards.daily_revenue
+SELECT CURRENT_DATE, SUM(amount) FROM phase3_raw.revenue_data;
+
