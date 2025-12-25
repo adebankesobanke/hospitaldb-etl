@@ -9,3 +9,4 @@ def notify_failure(context):
     execution_date = context.get('execution_date')
     
     print(f"[ALERT] DAG '{dag_id}', task '{task_id}' failed on {execution_date}")
+this will fail
