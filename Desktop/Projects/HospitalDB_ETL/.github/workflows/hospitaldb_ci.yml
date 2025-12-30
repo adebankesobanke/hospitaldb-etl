@@ -1,0 +1,17 @@
+name: HospitalDB CI Failure Test
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ❌ Intentional CI failure (test alert)
+        run: |
+          echo "Forcing CI failure to test alerts"
+          exit 1
