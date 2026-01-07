@@ -1,1 +1,29 @@
 phase5/ci_cd/github_actions_etl.yml
+<<<<<<< HEAD
+=======
+name: HospitalDB ETL CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Validate SQL files
+        run: |
+          find phase2/sql phase3/sql phase4/airflow/sql -name "*.sql" -exec echo "Checking {}" \;
+
+      - name: Validate Python DAGs
+        run: |
+          python3 -m py_compile phase4/airflow/dags/*.py
+          python3 -m py_compile phase5/notifications/*.py
+>>>>>>> 6af9b5afdd4ce94ec461b6cc25b17afbd2b33376

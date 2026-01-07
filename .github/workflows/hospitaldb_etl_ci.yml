@@ -1,0 +1,38 @@
+name: HospitalDB ETL CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-etl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Validate SQL files exist
+        run: |
+          echo "Validating SQL files..."
+          find phase2/sql phase3/sql phase4/airflow/sql -name "*.sql"
+
+      - name: Validate Airflow DAG syntax
+        run: |
+          python -m py_compile phase4/airflow/dags/*.py
+
+      - name: Validate notification scripts
+        run: |
+          python -m py_compile phase5/notifications/*.py
+
+      - name: CI completed successfully
+        run: echo "HospitalDB ETL CI passed"

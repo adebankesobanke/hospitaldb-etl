@@ -6,3 +6,5 @@ airflow_venv/
 # OS
 .DS_Store
 Thumbs.db
+airflow_home/
+airflow_home/
