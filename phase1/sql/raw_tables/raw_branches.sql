@@ -1,6 +1,9 @@
-CREATE TABLE IF NOT EXISTS raw.branches_raw (
-    branch_id INT PRIMARY KEY,
-    branch_name VARCHAR(100),
-    city VARCHAR(50),
-    state VARCHAR(50)
+DROP TABLE IF EXISTS raw.branches_raw;
+
+CREATE TABLE raw.branches_raw (
+    branch_id INTEGER,
+    branch_name TEXT,
+    address TEXT,
+    city TEXT,
+    state TEXT
 );

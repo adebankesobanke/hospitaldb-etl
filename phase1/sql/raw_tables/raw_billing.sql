@@ -1,11 +1,7 @@
-CREATE TABLE IF NOT EXISTS raw_billing (
-    bill_id          INT PRIMARY KEY,
-    appointment_id   INT,
-    amount           DECIMAL(10,2),
-    payment_method   VARCHAR(50),
-    payment_status   VARCHAR(50),
-    branch_id INT,
-    FOREIGN KEY (visit_id) REFERENCES raw.visits_raw(visit_id),
-    FOREIGN KEY (branch_id) REFERENCES raw.branches_raw(branch_id)
-    created_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE IF NOT EXISTS raw.raw_billing (
+    billing_id      SERIAL PRIMARY KEY,
+    visit_id        INT,
+    patient_id      INT,
+    amount          NUMERIC(10,2),
+    created_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
