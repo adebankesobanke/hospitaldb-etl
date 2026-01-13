@@ -1,8 +1,10 @@
-CREATE MATERIALIZED VIEW IF NOT EXISTS daily_revenue_mv AS
+CREATE MATERIALIZED VIEW IF NOT EXISTS analytics.mv_daily_revenue AS
 SELECT
-    v.visit_date,
+    DATE(v.visit_date) AS revenue_date,
+    COUNT(DISTINCT b.visit_id) AS total_visits,
     SUM(b.amount) AS total_revenue
-FROM stg_visits v
-JOIN stg_billing b
-    ON v.visit_id = b.visit_id
-GROUP BY v.visit_date;
+FROM analytics.billing b
+JOIN analytics.visits v
+    ON b.visit_id = v.visit_id
+GROUP BY DATE(v.visit_date)
+ORDER BY revenue_date;
