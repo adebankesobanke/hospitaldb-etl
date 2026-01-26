@@ -2,11 +2,11 @@ import psycopg2
 import pandas as pd
 from logging_config import logger
 
-CSV_PATH = "phase1/csv/billing.csv"
+CSV_PATH = "phase1/csv/visits.csv"
 
-def load_billing_csv():
+def load_visits_csv():
     try:
-        logger.info("Starting raw_billing CSV load")
+        logger.info("Starting raw_visits CSV load")
 
         df = pd.read_csv(CSV_PATH)
 
@@ -21,27 +21,22 @@ def load_billing_csv():
         for _, row in df.iterrows():
             cur.execute(
                 """
-                INSERT INTO raw_billing (bill_id, visit_id, amount, payment_status)
-                VALUES (%s, %s, %s, %s)
+                INSERT INTO raw_visits (visit_id, patient_id, visit_date)
+                VALUES (%s, %s, %s)
                 """,
-                (
-                    row["bill_id"],
-                    row["visit_id"],
-                    row["amount"],
-                    row["payment_status"]
-                )
+                (row["visit_id"], row["patient_id"], row["visit_date"])
             )
 
         conn.commit()
         cur.close()
         conn.close()
 
-        logger.info(f"Loaded {len(df)} rows into raw_billing")
+        logger.info(f"Loaded {len(df)} rows into raw_visits")
 
     except Exception as e:
-        logger.error(f"Failed to load raw_billing: {e}")
+        logger.error(f"Failed to load raw_visits: {e}")
         raise
 
 
 if __name__ == "__main__":
-    load_billing_csv()
+    load_visits_csv()
