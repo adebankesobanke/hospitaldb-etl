@@ -46,5 +46,8 @@ phase4/python/data/
 # Airflow virtual environments
 phase4/airflow/venv/
 airflow_venv/
+# Airflow virtual environment
 
 
+# Airflow virtual environment
+phase4/airflow/venv_airflow/
