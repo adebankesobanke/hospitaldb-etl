@@ -23,3 +23,17 @@ airflow_venv/
 config.py
 run_airflow.ps1
 5
+airflow_venv/
+# Local config / secrets
+phase4/python/config.py
+
+# Local / raw data
+phase4/python/data/
+
+# Airflow virtual envs
+phase4/airflow/venv/
+airflow_venv/
+
+# Optional: ignore logs (if you don't want them in GitHub)
+phase4/logs/
+phase5/logs/
