@@ -18,3 +18,8 @@ __pycache__/
 # Airflow
 airflow_home/
 airflow_venv/
+
+# Local config / scripts
+config.py
+run_airflow.ps1
+5
