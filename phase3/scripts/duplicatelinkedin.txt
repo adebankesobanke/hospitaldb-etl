@@ -1,0 +1,7 @@
+touch p phase1/python/logging_config.py
+
+touch p phase1/python/load_patients_csv.py
+
+touch p phase1/python/load_visits_csv.py
+
+“I closed a duplicate account twice, but now my main profile has lost edit access. When I sign in, the closed account reappears. Please restore edit access to my main profile and ensure the duplicate account remains closed.”
