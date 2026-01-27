@@ -53,3 +53,8 @@ airflow_venv/
 phase1/csv/
 bash: phase1/csv/: Is a directory
 
+# Airflow virtual environment
+phase4/airflow/venv_airflow/
+
+# Stray file
+phase
