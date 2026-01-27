@@ -49,5 +49,7 @@ airflow_venv/
 # Airflow virtual environment
 
 
-# Airflow virtual environment
-phase4/airflow/venv_airflow/
+ # Phase 1 raw CSV files
+phase1/csv/
+bash: phase1/csv/: Is a directory
+
