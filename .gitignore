@@ -37,3 +37,14 @@ airflow_venv/
 # Optional: ignore logs (if you don't want them in GitHub)
 phase4/logs/
 phase5/logs/
+# Local config / secrets
+phase4/python/config.py
+
+# Local / raw data
+phase4/python/data/
+
+# Airflow virtual environments
+phase4/airflow/venv/
+airflow_venv/
+
+
